@@ -1,0 +1,39 @@
+.comment-tree-node {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  // each comment & image
+  .comment-container {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+
+    // image and border
+    & > .avatar-container {
+      height: 70px;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      z-index: 2;
+      position: absolute;
+      top: -5px;
+      left: -25px;
+    }
+  }
+}
+
+.reply-border {
+  border-left: 1px solid gray !important;
+}
+
+.avatar {
+  margin: auto 0;
+  height: 50px;
+  width: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  overflow: hidden;
+  font-size: 10px;
+  border-radius: 100px;
+}

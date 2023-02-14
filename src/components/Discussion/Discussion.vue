@@ -9,16 +9,13 @@
 </template>
 
 <script lang="ts" setup>
-import { inject, onMounted } from "vue";
+import { inject } from "vue";
 import { IDiscussion } from "../../types/discussions";
 import CommentTreeNode from "./CommentTreeNode.vue";
 
 defineProps<{ discussions: IDiscussion[] }>();
-const isMobile: boolean = inject("isMobile")!;
 
-onMounted(() => {
-  console.log("is mobile is: ", isMobile);
-});
+const isMobile: boolean = inject("isMobile")!;
 </script>
 
 <style lang="scss">

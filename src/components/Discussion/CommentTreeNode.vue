@@ -66,18 +66,16 @@
       :class="{ 'py-5': isReply }"
       class="ml-14"
     />
-    <ReplyBox v-if="!isReply" class="ml-12" />
+    <ReplyBox v-if="!isReply" class="ml-12 mr-4" />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed, inject, onMounted, ref } from "vue";
+import { ref } from "vue";
 import moment from "moment";
 import ReplyBox from "./ReplyBox.vue";
 import { IDiscussion } from "../../types/discussions";
 import LikeSvgComponent from "./../shared/svg/LikeSvgComponent.vue";
-
-const isMobile: boolean = inject("isMobile")!;
 
 const { discussion } = withDefaults(
   defineProps<{
@@ -88,8 +86,6 @@ const { discussion } = withDefaults(
 );
 
 const showReply = ref<boolean>(false);
-
-onMounted(() => {});
 </script>
 
 <style lang="scss">

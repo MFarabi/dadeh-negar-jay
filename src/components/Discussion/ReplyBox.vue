@@ -18,7 +18,3 @@
 <script lang="ts" setup>
 import CustomInput from "../shared/form/CustomInput.vue";
 </script>
-
-<style lang="scss">
-@import "../../assets/styles/discussion/reply-box.scss";
-</style>
